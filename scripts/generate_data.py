@@ -123,7 +123,7 @@ for order_id in orders_df["order_id"]:
 order_items_df = pd.DataFrame(order_items)
 
 
-##### ORDER ITEMS #####
+##### PAYMENTS #####
 payments = []
 
 for payment_id, order_id in enumerate(orders_df["order_id"], start=1):
