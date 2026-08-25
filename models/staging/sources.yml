@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: ecommerce #not the name of external source, the logical name we give to that external source
+    description: >
+      Raw e-commerce data loaded from the operational source system.
+
+    schema: raw #this tells dbt where these tables actually live
+
+    tables:
+
+      - name: customers
+        description: >
+          Raw customer records from the e-commerce platform.
+
+      - name: products
+        description: >
+          Raw product catalog data.
+
+      - name: orders
+        description: >
+          Raw order transactions.
+
+      - name: order_items
+        description: >
+          Individual products associated with each order.
+
+      - name: payments
+        description: >
+          Payment transactions associated with orders.
+
+      - name: events
+        description: >
+          Raw customer website activity events.
