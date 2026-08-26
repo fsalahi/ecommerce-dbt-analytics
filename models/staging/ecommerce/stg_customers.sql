@@ -4,7 +4,7 @@ SELECT
     customer_id,
     first_name,
     last_name,
-    LOWER(TRIM(email)) AS email,
+    {{ clean_text('email') }} AS email,
     INITCAP(TRIM(country)) AS country,
     signup_date
 
