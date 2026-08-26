@@ -57,7 +57,14 @@ SELECT
 
     COALESCE(ot.order_revenue, 0) AS order_revenue,
     COALESCE(ot.order_cost, 0) AS order_cost,
-    COALESCE(ot.order_gross_profit, 0) AS order_gross_profit
+    COALESCE(ot.order_gross_profit, 0) AS order_gross_profit,
+    CASE
+    WHEN customer_order_number = 1
+        THEN 'new_customer_order'
+
+    ELSE 'repeat_customer_order'
+
+END AS order_type
 
 FROM customer_order_sequence o
 
